@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        // $(document).on("keypress keyup keydown",function(event){
+    //     $("#eventType").text(event.type)
+    // })
+
+    // $(document).on("mousemove",function(event){
+    //     $("#pageX").text(event.pageX)
+    //     $("#pageY").text(event.pageY)
+    // })
+
+    $("#japko").css({
+        "margin-left":Math.floor((Math.random() * 500) +1),
+        "margin-top":Math.floor((Math.random() * 500) +1)
+    })
+
+    let positionX = 0;
+    let positionY = 0;
+    $(document).on("keydown",function(event){
+        
+        if(event.key == "d"){
+            positionX += 10;
+            $("#kwadrat").css("margin-left",positionX+"px")
+        }
+        if(event.key == "a"){
+            positionX -= 10;
+            $("#kwadrat").css("margin-left",positionX+"px")
+        }
+        if(event.key == "w"){
+            positionY -= 10;
+            $("#kwadrat").css("margin-top",positionY+"px")
+        }
+        if(event.key == "s"){
+            positionY += 10;
+            $("#kwadrat").css("margin-top",positionY+"px")
+        }
+        
+        
+    })
+    })
+    
+
+</script>
+<style>
+#kwadrat{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+}
+#japko{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+    <!-- <input type="text" id="pole">
+
+    <p>
+        Typ zdarzenia:
+        <span id="eventType">---</span>
+    </p>
+
+    <p>
+        Pozycja myszy:
+        X = <span id="pageX">---</span>,
+        Y = <span id="pageY">---</span>
+    
+    </p> -->
+
+    <div id="kwadrat"></div>
+    <div id="japko"></div>
+
+</body>
+</html>
