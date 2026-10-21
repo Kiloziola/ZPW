@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $("#newsletter").change(function(){
+            if($(this).is(":checked")){
+                $("#stan").text("Zapisano do newslettera");
+            }else{
+                $("#stan").text("wypisano z newslettera");
+            }
+        })
+        $("#accregulamin").change(function(){
+            if($(this).is(":checked")){
+                $("#zarejestruj").prop("disabled",false);
+            }else{
+                $("#zarejestruj").prop("disabled",true);
+            }
+        })
+        $("#textarea").on("input", function(){
+            licznik = 100;
+            licznikrev = $("#textarea").val().length;
+
+
+            $("#licznik").text(licznik-licznikrev);
+            if(licznikrev >= 90){
+                $("#licznik").css("color", "red");
+            }else{
+                $("#licznik").css("color", "black");
+            }
+
+        })
+    })
+    
+    
+
+</script>
+<style>
+
+</style>
+</head>
+<body>
+    <input type="checkbox" id="newsletter"> Chcę newsletter
+    <p id="stan"></p>
+
+    <hr>
+
+    <input type="checkbox" id="accregulamin"> Akceptuję Reulamin
+    <button id="zarejestruj" disabled>Zarejestruj</button>
+
+    <hr>
+
+    <textarea name="textarea" id="textarea" maxlength="100"></textarea>
+    <p id="licznik"></p>
+    
+</body>
+</html>
