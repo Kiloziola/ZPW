@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        // $("#sprawdz").click(function(){
+        //     let name = $("#imie").val().trim()
+        //     if(name === ""){
+        //         $("#blad").text("Pole jes wymagane.");
+        //     }else{
+        //         $("#blad").text("twoje imie to: " + name);
+        //     }
+        // })
+
+        // $("#form").submit(function(e){
+        //     e.preventDefault()
+        //     let nazwisko = $("#nazwisko").val().trim()
+        //     if(nazwisko === ""){
+        //         $("#alert").text("Podaj nazwisko").css("color", "red");
+        //     }else{
+        //         $("#alert").text("Wysłano formularz").css("color", "green");
+        //     }
+        // })
+
+        // $("#sprawdzwiek").click(function(){
+        //     let wiek = Number($("#wiek").val());
+
+        //     if(isNaN(wiek)){
+        //         $("#info").text("Wiek musi byc liczbą");
+        //     }else{
+        //         $("#info").text("Masz" + wiek + " lat.");
+        //     }
+        // })
+
+        $("#zapisz").click(function(){
+            ocena = $("#ocena").val().trim();
+            if(ocena)
+        })
+
+
+    
+    
+    
+    })
+    
+    
+
+</script>
+<style>
+
+</style>
+</head>
+<body>
+    <input type="text" id="imie">
+    <button id="sprawdz">Sprawdz</button>
+    <p id="blad"></p>
+
+    <hr>
+
+    <form id="form">
+        <input type="text" id="nazwisko">
+        <button type="submit" id="wyslij">Wyślij</button>
+        <p id="alert"></p>
+
+    </form>
+
+    <hr>
+
+    <input type="text" id="wiek">
+    <button id="sprawdzwiek">Sprawdz</button>
+    <p id="info"></p>
+
+    <hr>
+
+    <input type="text" id="ocena" max="6" min="1">
+    <button id="zapisz">Zapisz</button>
+    <p id="bladalert"></p>
+    
+</body>
+</html>
