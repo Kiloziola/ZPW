@@ -1,0 +1,18 @@
+{odstęp}-{kierunek}-{rozmiar ekranu}
+pt-lg-5
+
+t - gora
+b - dol
+s - lewo
+e - prawo
+x - lewo prawo
+y - gora dol
+(brak wartosci) - wszystkie strony
+
+(brak) 0px kazdy, takze maly telefon (col-6)
+sm 576px duzy telefon poziomo (col-sm-6)
+md 768px tablet (col-md-6)
+lg 992px laptop (col-lg-4)
+xl 1200px monitor (col-xl-3)
+xxl 1400px duzy monitor (col-xxl-2)
+
